@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<web-app>
+	<display-name>SIGN IN FIRST</display-name>
+	<servlet>
+		<servlet-name>Login</servlet-name>
+		<servlet-class>com.rupp.myclientmyinvoice.LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Login</servlet-name>
+		<url-pattern>/login</url-pattern>
+
+	</servlet-mapping>
+	<!-- RatanaSOTH myWorld -->
+	<servlet>
+		<servlet-name>GetInvoices</servlet-name>
+		<servlet-class>com.rupp.myclientmyinvoice.GetInvoicesServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetInvoices</servlet-name>
+		<url-pattern>/getInvoices/</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AddInvoice</servlet-name>
+		<servlet-class>com.rupp.myclientmyinvoice.AddInvoiceServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddInvoice</servlet-name>
+		<url-pattern>/add-invoice</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DeleteInvoices</servlet-name>
+		<servlet-class>com.rupp.myclientmyinvoice.DeleteInvoicesServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteInvoices</servlet-name>
+		<url-pattern>/delete-invoices</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>GetInvoice</servlet-name>
+		<servlet-class>com.rupp.myclientmyinvoice.GetInvoiceServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetInvoice</servlet-name>
+		<url-pattern>/get-invoice</url-pattern>
+	</servlet-mapping>
+	
+	
+			<servlet>
+		<servlet-name>UpdateInvoice</servlet-name>
+		<servlet-class>com.rupp.myclientmyinvoice.UpdateInvoiceServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateInvoice</servlet-name>
+		<url-pattern>/update-invoice</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>Login2</servlet-name>
+		<servlet-class>com.rupp.myclientmyinvoice.Login2Servlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Login2</servlet-name>
+		<url-pattern>/login2</url-pattern>
+	</servlet-mapping>
+
+	<!-- / RatanaSOTH myWorld -->
+
+	<servlet>
+		<servlet-name>Logout</servlet-name>
+		<servlet-class>com.rupp.myclientmyinvoice.LogoutServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Logout</servlet-name>
+		<url-pattern>/logout</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GetCustomers</servlet-name>
+		<servlet-class>com.rupp.myclientmyinvoice.GetCustomersServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetCustomers</servlet-name>
+		<url-pattern>/getCustomers/</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GetCustomer</servlet-name>
+		<servlet-class>com.rupp.myclientmyinvoice.GetCustomerServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetCustomer</servlet-name>
+		<url-pattern>/get-customer</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AddCustomer</servlet-name>
+		<servlet-class>com.rupp.myclientmyinvoice.AddCustomerServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddCustomer</servlet-name>
+		<url-pattern>/add-customer</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UpdateCustomer</servlet-name>
+		<servlet-class>com.rupp.myclientmyinvoice.UpdateCustomerServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateCustomer</servlet-name>
+		<url-pattern>/update-customer</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DeleteCustomer</servlet-name>
+		<servlet-class>com.rupp.myclientmyinvoice.DeleteCustomerServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteCustomer</servlet-name>
+		<url-pattern>/delete-customer</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CustomerForm</servlet-name>
+		<servlet-class>com.rupp.myclientmyinvoice.CustomerFormServlet
+		</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>CustomerForm</servlet-name>
+		<url-pattern>/customer-form</url-pattern>
+	</servlet-mapping>
+
+
+
+	<servlet> <!-- servlet definition -->
+		<servlet-name>ErrorHandler</servlet-name>
+		<servlet-class>com.rupp.myclientmyinvoice.ErrorHandler</servlet-class>
+	</servlet>
+	<servlet-mapping><!-- servlet mappings -->
+		<servlet-name>ErrorHandler</servlet-name>
+		<url-pattern>/errorHandler</url-pattern>
+	</servlet-mapping>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/errorHandler</location>
+	</error-page>
+	<error-page>
+		<error-code>401</error-code>
+		<location>/errorHandler</location>
+	</error-page>
+
+
+	<error-page>
+		<!-- exception-type generic error -->
+		<exception-type>java.lang.Throwable</exception-type>
+		<location>/ErrorHandler</location>
+	</error-page>
+
+
+	<session-config>
+		<!-- 15 minute default value is 30min -->
+		<session-timeout>1500</session-timeout>
+	</session-config>
+	<filter>
+		<filter-name>MyFilter</filter-name>
+		<filter-class>com.rupp.myclientmyinvoice.MyFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>MyFilter</filter-name>
+		<url-pattern>/app/*</url-pattern>
+	</filter-mapping>
+
+
+	<welcome-file-list>
+		<welcome-file>login.html</welcome-file>
+	</welcome-file-list>
+
+
+</web-app>
+
