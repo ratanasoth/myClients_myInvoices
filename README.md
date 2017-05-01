@@ -7,6 +7,7 @@ program content:
 <ol>4. DBCP2 is also used for data source</ol>
 <ol>5. JDBC for mapping retrieved data</ol>
 <ol>6. JSON</ol>
+<ol>7. Git</ol>
 </ul>
 <h2>Program Feature</h2>
 <ul>
